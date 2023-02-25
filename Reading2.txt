@@ -1,0 +1,10 @@
+1. Each thread created by the client can be used to fetch a different part of a file thats coming from a mirror server which reduces the amount of time it would take. If all were done by a single thread it could bottleneck taking longer.
+2. The biggest advantage to using threads is efficiency. The biggest disadvantage is that if a thread blocks then the entire process would block
+3. Yes it works for preemptive scheduling as thats what it was made for, if it wasn't preemptive then it could fail.
+4. Yes it would work, only one producer can add an item
+5. The operating system reads the value of the semaphore and will perform an action if the conditions are met. When the operations are finished then the interrupts can be enabled again
+6. They are communicating by passing messages, in this case taking orders, making food, and bagging food. This relates to UNIX because its like if four processes are connected by pipes
+7. The order should be run with the shortest job as the first one to minimize average respone time X > 9: 3,5, 6, 9, X
+8. The prediction for next time is 40,30, 35, and then 25
+9. Yes it guarantees a deadlock-free operation since theres at least one fork free and one philiosopher that can be used at the same time
+10. With variation 1 the readers have priority and no writer will be able to start when the reader is active. When a new reader is added it can start instantly unless a writer is already active. With Variation 2 the writers have priority and no new reader can be started unless all the writers are finished. With Variation 3, it is a symmetric version meaning that when a reader is active then a new one can be added once its done and when a writer is done then the next new writer has priority
